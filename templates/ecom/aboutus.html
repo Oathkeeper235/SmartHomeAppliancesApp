@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Simple E-commerce</title>
+    <style media="screen">
+        .footer {
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body style="background-color:#f7f7f7;">
+{% if request.user.is_authenticated %}
+    {% include "ecom/customer_navbar.html" %}
+{% else %}
+    {% include "ecom/navbar.html" %}
+{% endif %}
+<br><br><br>
+<h3 style="text-align:center;">"Систем за електронска продавница која нуди смарт продукти за во
+    вашиот дом. Оваа продавница е од типот е-трговија и е наменета за
+    возрасни луѓе кои би сакале да го подобрат секојдневниот живот во
+    својот дом со смарт продукти. Интернетот на нештата (IoT) измина долг
+    пат. Луѓето сакаат сите нивни уреди да се поврзани за да можат да
+    комуницираат едни со други и да ги предвидат нивните потреби. На
+    пример, доаѓањето дома од работа и отворањето на вратата од гаражата
+    треба да сигнализира клима уредот да се вклучи. Во исто време, треба
+    да му сигнализира на паметниот звучник да пушти малку релаксирачка
+    музика доколку сте под стрес. Нивоата на стрес може да се утврдат од
+    апликацијата за следење на расположение на вашиот паметен часовник.
+    " </h3>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% include "ecom/footer.html" %}
+</body>
+<!--
+developed By : sumit kumar
+-->
+
+</html>
